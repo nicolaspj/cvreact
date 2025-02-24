@@ -6,8 +6,8 @@ function AboutmeEn() {
           <p className="fs-3 fst-italic text-center text-light">
             I am a Backend PHP Developer with 3 years of experience in the
             field, where I develop and maintain custom web applications tailored
-            to clients' needs. Additionally, I have basic Frontend knowledge and
-            am currently studying React for future implementations.
+            to client's needs. Additionally, I have basic Frontend knowledge and
+            I am currently studying React for future implementations.
           </p>
         </div>
 
