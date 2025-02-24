@@ -1,9 +1,26 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 function Navbar() {
+  const [isEnglish, setIsEnglish] = useState(true); // Estado para controlar el idioma
+  const navigate = useNavigate(); // Navegación
+
+  // Función para manejar el cambio de idioma
+  const handleLanguageToggle = (language) => {
+    if (language === "EN") {
+      setIsEnglish(true); // Muestra el botón "ES"
+      navigate("/AboutmeEn"); // Cambia la ruta a "AboutmeEn"
+    } else {
+      setIsEnglish(false); // Muestra el botón "EN"
+      navigate("/cvreact"); // Cambia la ruta a "cvreact"
+    }
+  };
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          Desarrollador FullStack
+          FullStack Developer
         </a>
         <button
           className="navbar-toggler"
@@ -21,6 +38,32 @@ function Navbar() {
           id="navbarNav"
         >
           <ul className="navbar-nav">
+            {/* Botón EN: Condicionalmente ocultado */}
+            <li className="nav-item">
+              <button
+                type="button"
+                className={`btn btn-outline-light btn-lg ${
+                  isEnglish ? "d-none" : ""
+                }`}
+                onClick={() => handleLanguageToggle("EN")}
+              >
+                EN
+              </button>
+            </li>
+
+            {/* Botón ES: Condicionalmente ocultado */}
+            <li className="nav-item">
+              <button
+                type="button"
+                className={`btn btn-outline-light btn-lg ${
+                  !isEnglish ? "d-none" : ""
+                }`}
+                onClick={() => handleLanguageToggle("ES")}
+              >
+                ES
+              </button>
+            </li>
+            <li> </li>
             <li className="nav-item">
               <button
                 type="button"
