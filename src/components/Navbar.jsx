@@ -79,12 +79,12 @@ function Navbar() {
               </button>
             </li>
             <li className="nav-item">
-                <a
-                  href="https://nicolaspj.github.io/landing/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-outline-light btn-lg"
-                >
+              <a
+                href="https://nicolaspj.github.io/landing/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-outline-light btn-lg"
+              >
                 Landing Page
               </a>
             </li>
@@ -99,10 +99,4 @@ function descargarArchivo(url, nombreArchivo) {
   var link = document.createElement("a");
   link.href = url;
   link.download = nombreArchivo;
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-  alert("!! Gracias por su consideración ¡¡");
-}
-
-export default Navbar;
+  document.body
