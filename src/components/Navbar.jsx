@@ -99,4 +99,10 @@ function descargarArchivo(url, nombreArchivo) {
   var link = document.createElement("a");
   link.href = url;
   link.download = nombreArchivo;
-  document.body
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  alert("!! Gracias por su consideración ¡¡");
+}
+
+export default Navbar;
