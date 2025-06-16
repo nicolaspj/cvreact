@@ -78,13 +78,12 @@ function Navbar() {
                 Descargar CV
               </button>
             </li>
-            </li>
             <li className="nav-item">
                 <a
-    href="https://nicolaspj.github.io/landing/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="btn btn-outline-light btn-lg"
+                  href="https://nicolaspj.github.io/landing/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-outline-light btn-lg"
                 >
                 Landing Page
               </a>
